@@ -141,13 +141,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="col-md-12">
 									<div class="about-desc">
 										<!--<span class="heading-meta">About</span>-->
-										<h1 class="colorlib-heading">About</h1>
+										<h2 class="colorlib-heading">About</h2>
 										<p>  <!--<strong>Hi I'm Sunipa Dev-->
-									     </strong> I am a PhD student advised by <a href = "https://www.cs.utah.edu/~jeffp/"> Dr. Jeff Phillips </a> at the <a href = "http://www.cs.utah.edu"> School of Computing</a> in <a href="https://www.utah.edu"> University of Utah</a>. Currently my research involves word embeddings and their geometry and the pursuit to make them more robust, interpretable and fair. My research interests broadly encompass various modules of Machine Learning, NLP and Data Mining..</p>
+									     </strong> I am a 4th year PhD student advised by <a href = "https://www.cs.utah.edu/~jeffp/"> Dr. Jeff Phillips </a> at the <a href = "http://www.cs.utah.edu"> School of Computing</a> in <a href="https://www.utah.edu"> University of Utah</a>. Currently my research involves word embeddings and their geometry and the pursuit to make them more robust, interpretable and fair. My research interests broadly encompass various modules of Machine Learning, NLP and Data Mining..</p>
 										<p>Before joining my PhD position in 2016, I completed my integrated BS - MS in Mathematics at the <a href="https://www.iiserkol.ac.in">Indian Institute of Science Research and Education, Kolkata </a> where I did research on graph theory and brain mapping with <a href ="https://www.iiserkol.ac.in/~anirban.banerjee/"> Dr. Anirban Banerjee </a>.</p>
 										<p> A list of my publications can be found <a href="https://scholar.google.com/citations?user=EV1DgP0AAAAJ&hl=en">here.</font></a></p>
 					                   
@@ -406,66 +406,126 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			<section class="colorlib-experience" data-section="experience">
 				<div class="colorlib-narrow-content">
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3" data-animate-effect="fadeInLeft">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<!--<span class="heading-meta">Experience</span>-->
-							<h1 class="colorlib-heading">Research Projects</h1>
+							<h2 class="colorlib-heading animate-box">Research Projects</h2>
 						</div>
 					</div>
-
-					         <article>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 					            <div class="timeline-entry-inner">
+
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-pen2"></i>
+					               </div>
 
 					               <div class="timeline-label">
 					                  <h2>Absolute Orientation of Word Embedding Alignment <!--<span>May - August 2015</span>--></h2>
 					                  <p>We explore ways to align high dimensional word embeddings extracted by different methods and from different datasets with each other. We also look at the different applications of this technique. We can extend these methods to other sets of high dimensional vectors.</p>
 					                  <p> <a href = "http://arxiv.org/abs/1806.01330">arXiv Paper</a> </p>
+					                  <p> Code can be found <a href = "https://github.com/sunipa/Abs-Orientation">here</a> </p>
 					               </div>
 					            </div>
 					         </article>
 
 
-					         <article>
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
 					               <div class="timeline-label">
 					               	<h2>Attenuating Bias in Word Vectors <!--<span>2017-2018</span>--></h2>
 					                  <p>In this project, we explore and compare ways to detect and remove bias from word embeddings. We perform a uniform simple linear projection on embeddings to correct the bias and demonstrate how it works the best among other methods. We also devise two quantitative methods to uniformly adjudge the gender bias and quality of the embeddings. Finally, we use names as a powerful tool to detect the bias direction of different types of bias like gender biased or racial bias.</p>
 					                   <p> <a href = "https://arxiv.org/abs/1901.07656">arXiv Paper</a> </p>
+					               	   <p> Code can be found <a href = "https://github.com/sunipa/Attenuating-Bias-in-Word-Vec">here</a> </p>
+					               </div>
 					               </div>
 					            </div>
 					         </article>
 
-    						<article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 					            <div class="timeline-entry-inner">
-									<div class="timeline-label">
-					               	<h2>Combatting Biases in Context-Free and Contextualized Word Embeddings <!--<span>2017-2018</span>--></h2>
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2>Combatting Biases in Context-Free and Contextualized Embeddings <!--<span>2017-2018</span>--></h2>
 					                  <p>We extend out technique of debiaisng embeddings to contextualized embeddings such as ELMo and BERT. We compare the bias content in the different types of embeddings and analyze diffeent types of social biases expressed by them : gender, religion and nationality related biases. We facilitate this analysis by developing a schema of methodical tests based on the task of textual inference such that a deviation of prediction probabilities in the task indicates the amount of bias encoded by the embeddings. </p>
 					                   <p> More details can be found <a href = "https://arxiv.org/abs/1901.07656">here</a> </p>
 					               	   <p> Code for developing the test and for debiasing the embeddings can be found <a href = "https://github.com/sunipa/On-Measuring-and-Mitigating-Biased-Inferences-of-Word-Embeddings">here</a> </p>
 					               </div>
+					               </div>
+					            </div>
+					         </article>
+					         <!--<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-3">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">System Analyst</a> <span>2017-2018</span></h2>
+					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					               </div>
 					            </div>
 					         </article>
 
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-4">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">Creative Designer</a> <span>2017-2018</span></h2>
+					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-5">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">UI/UX Designer at Envato</a> <span>2017-2018</span></h2>
+					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-none">
+					               </div>
+					            </div>
+					         </article>-->
+					      </div>
+					   </div>
+				   </div>
 				</div>
 			</section>
-			
 			
 			
 			<section class="colorlib-education" data-section="education">
 				<div class="colorlib-narrow-content">
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3" data-animate-effect="fadeInLeft">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<!--<span class="heading-meta">Education</span>-->
-							<h1 class="colorlib-heading">Education</h1>
+							<h2 class="colorlib-heading animate-box">Education</h2>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-12">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<div class="fancy-collapse-panel">
 								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingOne">
 									        <h4 class="panel-title">
-									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">PhD Computing - Data Management and Analysis Track
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">PhD Computing - Data Management and Analysis Track
 									            </a>
 									        </h4>
 									    </div>
@@ -473,7 +533,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									         <div class="panel-body">
 									            <div class="row">
 										      		<!--<div class="col-md-6">-->
-										      			<p> Fourth year PhD student in Computing (Data Management and Analysis Track) at the University of Utah. </p>
+										      			<p> Third year PhD student in Computing (Data Management and Analysis Track) at the University of Utah. </p>
 										      		<!--</div>-->
 										      		<!--<div class="col-md-6">-->
 										      			<!--<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>-->
@@ -512,6 +572,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									        </div>
 									    </div>
 									</div>
+
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingFour">
 									        <h4 class="panel-title">
@@ -525,6 +586,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									        </div>
 									    </div>
 									</div>
+
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingFive">
 									        <h4 class="panel-title">
@@ -547,36 +609,48 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <section class="colorlib-experience" data-section="publications">
 				<div class="colorlib-narrow-content">
 					<div class="row">
-						<div>
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<!--<span class="heading-meta">Experience</span>-->
-							<h2 class="colorlib-heading">Publications</h2>
+							<h2 class="colorlib-heading animate-box">Publications</h2>
 						</div>
 					</div>
-
-					         <article>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 					            <div class="timeline-entry-inner">
 
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-pen2"></i>
+					               </div>
+
 					               <div class="timeline-label">
-					                  <p> <a href="http://proceedings.mlr.press/v89/dev19a/dev19a.pdf"><font color = 'black'>S.Dev, J. M. Phillips; 'Attenuating Bias in Word Vetcors', AISTATS 2019, Okinawa, Japan</font></a> <!--<span>May - August 2015</span>--></p>
+					                  <h2> <a href="http://proceedings.mlr.press/v89/dev19a/dev19a.pdf"><font color = 'black'>S.Dev, J. M. Phillips; 'Attenuating Bias in Word Vetcors', AISTATS 2019, Okinawa, Japan</font></a> <!--<span>May - August 2015</span>--></h2>
 					                  
 					               </div>
 					            </div>
 					         </article>
 
 
-					         <article>
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
 					               <div class="timeline-label">
-					               	<p> <a href="https://arxiv.org/abs/1806.01330"><font color = 'black'>S.Dev, S. Hassan, J. M. Phillips; 'Closed Form Word Embedding Alignment', ICDM 2019, Beijing, China</font></a> ; Invited to Special Issue of Journal KAIS<!--<span>May - August 2015</span>--></p>
+					               	<h2> <a href="https://arxiv.org/abs/1806.01330"><font color = 'black'>S.Dev, S. Hassan, J. M. Phillips; 'Closed Form Word Embedding Alignment', ICDM 2019, Beijing, China</font></a> <!--<span>May - August 2015</span>--></h2>
 					                  
 					               </div>
 					            </div>
 					         </article>
 					         
-					         	<article>
+					         	<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-pen2"></i>
+					               </div>
 					               <div class="timeline-label">
-					               	<p> <a href="https://arxiv.org/abs/1908.09369"><font color = 'black'>S.Dev, T. Li, J. M. Phillips, V. Srikumar; 'On Measuring and Mitigating Biased Inferences of Word Embeddings', AAAI 2020, New York City, USA</font></a> <!--<span>May - August 2015</span>--></p>
+					               	<h2> <a href="https://arxiv.org/abs/1908.09369"><font color = 'black'>S.Dev, T. Li, J. M. Phillips, V. Srikumar; 'On Measuring and Mitigating Biased Inferences of Word Embeddings', AAAI 2020, New York City, USA</font></a> <!--<span>May - August 2015</span>--></h2>
 					                  
 					               </div>
 					            </div>
@@ -593,6 +667,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 					            </div>
 					         </article>
+
 					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-4">
@@ -604,6 +679,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 					            </div>
 					         </article>
+
 					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-5">
@@ -615,6 +691,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 					            </div>
 					         </article>
+
 					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-none">
@@ -622,21 +699,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					            </div>
 					         </article>-->
 					      </div>
-
+					   </div>
+				   </div>
+				</div>
 			</section>
 
 <section class="colorlib-experience" data-section="teaching">
 				<div class="colorlib-narrow-content">
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<!--<span class="heading-meta">Experience</span>-->
-							<h2 class="colorlib-heading">Teaching</h2>
+							<h2 class="colorlib-heading animate-box">Teaching</h2>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
 				         <div class="timeline-centered">
-					         <article class="timeline-entry" data-animate-effect="fadeInLeft">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 					            <div class="timeline-entry-inner">
 
 					               <div class="timeline-icon color-1">
@@ -651,7 +730,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					         </article>
 
 
-					         <article class="timeline-entry" data-animate-effect="fadeInRight">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-2">
 					                  <i class="icon-pen2"></i>
@@ -663,7 +742,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					            </div>
 					         </article>
 					         
-					         	<article class="timeline-entry" data-animate-effect="fadeInRight">
+					         	<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-1">
 					                  <i class="icon-pen2"></i>
@@ -686,6 +765,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 					            </div>
 					         </article>
+
 					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-4">
@@ -697,6 +777,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 					            </div>
 					         </article>
+
 					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-5">
@@ -708,6 +789,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 					            </div>
 					         </article>
+
 					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-none">
@@ -724,8 +806,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <section class="colorlib-experience" data-section="cv">
 	<div class="colorlib-narrow-content">
 		<div class="row">
-			<div>
+			<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 <!--<object data="Resume_SunipaDev.pdf" type="application/pdf" width="100%" height="100%">
+
 </object>-->
 			<h2 class="colorlib-heading">CV</h2>
 			<p>Here's a downloadable version of my <a href="Resume_SunipaDev.pdf">CV</a>!</p>
@@ -848,6 +931,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 				</div>
 			</section>
+
 			<section class="colorlib-blog" data-section="blog">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -923,6 +1007,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<p>261 S 800 E, Salt Lake City, UT 84102</p>
 								</div>
 							</div>
+
 							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="colorlib-icon">
 									<i class="icon-phone"></i>
@@ -985,3 +1070,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	</body>
 </html>
+
