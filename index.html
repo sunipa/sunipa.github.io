@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sunipa Dev - Tech Lead & Research Scientist</title>
+    <meta name="description" content="Sunipa Dev's personal website: Tech Lead and Research Scientist at Google, working at the intersection of language, AI, and society.">
+    <meta name="keywords" content="Sunipa Dev, Google Research, AI, NLP, Machine Learning, Fairness, Ethics, Cross Cultural AI, HCI+NLP, WiNLP">
+    <meta name="author" content="Sunipa Dev">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/"> <meta property="og:title" content="Sunipa Dev - Tech Lead & Research Scientist">
+    <meta property="og:description" content="Sunipa Dev's personal website: Tech Lead and Research Scientist at Google, seeking to build safe, beneficial, and inclusive AI for global populations.">
+    <meta property="og:image" content="https://yourwebsite.com/images/profile-square.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/"> <meta property="twitter:title" content="Sunipa Dev - Tech Lead & Research Scientist">
+    <meta property="twitter:description" content="Sunipa Dev's personal website: Tech Lead and Research Scientist at Google, seeking to build safe, beneficial, and inclusive AI for global populations.">
+    <meta property="twitter:image" content="https://yourwebsite.com/images/profile-square.jpg"> <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Custom styles for fonts and smooth scrolling, overriding Tailwind defaults where necessary */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333; /* Darker text for readability */
+            background-color: #f8f8f8; /* Light background */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50; /* Dark blue/grey for headings */
+        }
+        /* Specific styling for the profile image in the header */
+        .header-profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #3498db; /* Primary blue border */
+        }
+        /* Styling for the main profile image in the hero section */
+        .hero-profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db; /* Primary blue border */
+            box-shadow: 0 0 0 8px rgba(52, 152, 219, 0.2); /* Subtle outer glow */
+        }
+        /* Custom underline for section titles */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #3498db; /* Primary blue */
+            margin: 1rem auto 0; /* Center and space below title */
+            border-radius: 2px;
+        }
+        .publication-item {
+            /* Removed: background-color, padding, border-radius, box-shadow */
+            margin-bottom: 1.5rem; /* Keep spacing between items */
+            padding-bottom: 1.5rem; /* Add padding to the bottom for separation */
+            border-bottom: 1px solid #eee; /* Subtle separator line */
+        }
+        .publication-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none; /* No line after the last item */
+        }
+        .publication-title {
+            font-size: 1.15rem; /* Slightly smaller for subtlety */
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.4rem;
+        }
+        .publication-authors {
+            font-size: 0.95rem; /* Slightly smaller for subtlety */
+            color: #555;
+            margin-bottom: 0.4rem;
+        }
+        .publication-venue-year {
+            font-size: 0.85rem; /* Even smaller */
+            color: #777;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+        }
+        .publication-venue {
+            font-style: italic;
+            margin-right: 0.5rem;
+        }
+        .publication-link {
+            color: #3498db;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .publication-link:hover {
+            color: #2c3e50;
+        }
+        .publication-tag {
+            background-color: #e0e7ff; /* Light blue background */
+            color: #3b82f6; /* Blue text */
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px; /* Full rounded corners */
+            margin-left: 0.5rem;
+            white-space: nowrap; /* Prevent tag from breaking */
+        }
+        .year-group-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        .year-navigation a {
+            color: #3b82f6;
+            font-weight: 500;
+            margin-right: 0.75rem;
+            transition: color 0.2s;
+        }
+        .year-navigation a:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        /* Social Icon Hover Colors */
+        .social-links a:hover {
+            color: #3498db; /* Primary blue on hover */
+            transform: translateY(-3px); /* Keep the subtle lift effect */
+        }
+        /* Override specific brand colors */
+        .fa-github:hover { color: #3498db; }
+        .fa-linkedin-in:hover { color: #3498db; }
+        .fa-graduation-cap:hover { color: #3498db; }
+        .fa-envelope:hover { color: #3498db; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <a href="#hero" class="flex items-center text-gray-800 hover:text-blue-600 transition-colors duration-300">
+                    <img src="images/IMG_5932.jpg" alt="Sunipa Dev" class="header-profile-img mr-3">
+                    <h1 class="text-2xl font-bold font-playfair">Sunipa Dev</h1>
+                </a>
+                <span class="text-sm text-gray-500 ml-4 hidden sm:block">Tech Lead and Research Scientist, Google</span>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300">About</a></li>
+                    <li><a href="#news" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300">News</a></li>
+                    <li><a href="#publications" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300">Publications</a></li>
+                    <li><a href="#cv" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300">CV</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 md:py-32 text-center flex flex-col items-center justify-center min-h-[calc(100vh-80px)]">
+            <div class="container mx-auto px-4">
+                <img src="images/IMG_5932.jpg" alt="Sunipa Dev" class="hero-profile-img mx-auto mb-8 shadow-lg">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-700 leading-tight mb-4 font-playfair">
+                    Building safe, beneficial, and inclusive AI for global populations.
+                </h2>
+                </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center mb-12 section-title">About</h2>
+                
+                <div id="about-details" class="text-lg leading-relaxed text-gray-700 space-y-6">
+                    <p>I am a Senior Research Scientist at <a href='https://ai.google/research/' class="text-blue-600 hover:underline font-medium" target="_blank">Google Research</a> in the Future of AI and Society organization. My research is at the intersection of language, AI, and society and I work towards the goal of building safe, and inclusive AI that is usable by the global majority. I currently am focussed on the social grounding of the reponsiveness of generative models in real-world experiences, and contextualizing them with diverse global perspectives and socio-cultural subjectivity. </p>
+                    <p>Prior to this, I was fortunate to receive the <a href="https://cifellows2020.org" class="text-blue-600 hover:underline font-medium" target="_blank">NSF Computing Innovation Fellowship</a> to work with <a href="http://web.cs.ucla.edu/~kwchang/" class="text-blue-600 hover:underline font-medium" target="_blank">Dr. Kai-Wei Chang</a> at <a href="https://samueli.ucla.edu/" class="text-blue-600 hover:underline font-medium" target="_blank">UCLA</a> where I also received the <a href="https://www.daad.de/en/the-daad/postdocnet/fellows/fellows/" class="text-blue-600 hover:underline font-medium" target="_blank">DAAD Ainet award</a> for my work. Before this I completed my PhD with <a href="https://www.cs.utah.edu/~jeffp/" class="text-blue-600 hover:underline font-medium" target="_blank">Dr. Jeff Phillips</a> at the <a href="http://www.cs.utah.edu" class="text-blue-600 hover:underline font-medium" target="_blank">School of Computing</a> in <a href="https://www.utah.edu" class="text-blue-600 hover:underline font-medium" target="_blank">University of Utah</a>, investigating various facets of high dimensional embeddings such as language models.</p>
+                    <p>I organize multiple workshops at *CL conferences, particularly the <a href="https://c3nlp.github.io/" class="text-blue-600 hover:underline font-medium" target="_blank">Cross Cultural Considerations in NLP</a> workshop which has helped mobilize researchers engaged with multi-cultural NLP of the world, and the <a href="https://sites.google.com/corp/view/hciandnlp/home" class="text-blue-600 hover:underline font-medium" target="_blank">HCI + NLP</a> workshop which bridges together interdisciplinary work that is much needed to push the frontiers of language technologies. I am also an advisor and former organizer for the Widening NLP or <a href="www.winlp.org" class="text-blue-600 hover:underline font-medium" target="_blank">WiNLP</a> workshop. Reach out to know more or to join us!</p>
+                   </div>
+                <div class="flex justify-center space-x-6 mt-10">
+                    <a href="https://github.com/sunipa" target="_blank" aria-label="GitHub Profile" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-3xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sunipa-dev-a12906126/" target="_blank" aria-label="LinkedIn Profile" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-3xl">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=EV1DgP0AAAAJ&hl=en" target="_blank" aria-label="Google Scholar Profile" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-3xl">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="mailto:sunipadev@google.com" aria-label="Email" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-3xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center mb-12 section-title">News</h2>
+                <ul class="list-disc pl-6 space-y-4 text-lg text-gray-700">
+                    <li>I was a Keynote Panelist for the inaugural <a href="https://2024.colmweb.org/SpecialSessions.html" class="text-blue-600 hover:underline font-medium" target="_blank">Conference on Language Modeling</a> (COLM 2024), where I discussed the importance of <a href="https://www.youtube.com/watch?v=aNPa00_-DbA" class="text-blue-600 hover:underline font-medium" target="_blank">multi-cultural AI</a>. I have also discussed this at the <a href="https://www.cs.cmu.edu/afs/cs.cmu.edu/Web/Posters/LTIColloquium, a keynote at the <a href="https://sites.google.com/corp/view/dai-2024/speakers" class="text-blue-600 hover:underline font-medium" target="_blank">Deployable AI Workshop</a> at AAAI 2024, and panels at <a href="https://www.winlp.org/winlp-2024-workshop/" class="text-blue-600 hover:underline font-medium" target="_blank">WiNLP 2024</a>, and <a href="https://jointmathematicsmeetings.org/meetings/national/jmm2025/2314_progfull.html" class="text-blue-600 hover:underline font-medium" target="_blank">JMM 2025</a>.</li>
+                    <li>You can now read more on my work and thoughts about improving model performance on gendered translations and culturally salient user queries in this article in <a href="https://www.nature.com/articles/s43588-024-00695-4" class="text-blue-600 hover:underline font-medium" target="_blank">Nature Computational Science</a>. A more detailed overview is also shared in <a href="https://blog.google/technology/ai/reducing-gender-based-harms-in-ai-with-sunipa-dev/" class="text-blue-600 hover:underline font-medium" target="_blank">The Keyword</a>.</li>
+                    <li>As the Ethics Chairs for EMNLP 2024, Luciana Benotti, Snigdha Chaturvedi, and I have drafted <a href="https://2024.emnlp.org/Strengthening-Ethical-Review-in-Natural-Language-Processing-Insights,-Best-Practices,-Resources-and-Paths-Forward/" class="text-blue-600 hover:underline font-medium" target="_blank">guidelines</a> for future editions. I continue to Senior Area Chair for <a href="https://aclrollingreview.org/" class="text-blue-600 hover:underline font-medium" target="_blank">ACL ARR</a> and <a href="https://naacl.org/" class="text-blue-600 hover:underline font-medium" target="_blank">NAACL</a>.</li>
+                    <li>Along with co-organizers Luciana Benotti, Vinodkumar Prabhakaran, Guido Ivetto, I will be at <a href="https://khipu.ai/" class="text-blue-600 hover:underline font-medium" target="_blank">Khipu AI</a> in Santiago, Chile in March 2025 with a new tutorial demonstrating the importance of scalable, cross-cultural evaluations of generative models.</li>
+                    <li>We will be organizing the 3rd Workshop on <a href="https://c3nlp.github.io/" class="text-blue-600 hover:underline font-medium" target="_blank">Cross Cultural Considerations</a> at NAACL 2025, and the 4th Workshop on <a href="https://sites.google.com/corp/view/hciandnlp/home" class="text-blue-600 hover:underline font-medium" target="_blank">HCI + NLP</a> at EMNLP 2025. Both workshop teams are excited to continue the fabulous conversations in the journey so far!</li>
+                    <li>One of our papers at ACL on the <a href="https://aclanthology.org/2023.acl-short.118/" class="text-blue-600 hover:underline font-medium" target="_blank">robustness of bias measurements in NLP</a> has won the Outstanding Paper Award!</li>
+                    <li>I am pleased to be named on the list of <a href="https://womeninaiethics.org/the-list/of-2022/" class="text-blue-600 hover:underline font-medium" target="_blank">100 Brilliant Women in AI Ethics</a> alongside many other amazing women! My evaluative datasets have also been contributed by Google to the <a href="https://research.google/blog/supporting-benchmarks-for-ai-safety-with-mlcommons/" class="text-blue-600 hover:underline font-medium" target="_blank">ML Commons</a>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="publications" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center mb-12 section-title">Publications</h2>
+                
+                <div class="text-center mb-8">
+                    <p class="text-lg text-gray-700 mb-4">Download a <a href="https://scholar.google.com/citations?user=EV1DgP0AAAAJ&hl=en&view_op=list_works&sortby=pubdate&cstart=0&pagesize=100" target="_blank" class="text-blue-600 hover:underline font-medium">BibTex file</a> containing all these papers.</p>
+                    <p class="text-base text-gray-600">Publications (grouped by year): <span id="year-navigation-links"></span></p>
+                </div>
+
+                <div id="publications-list" class="space-y-6">
+                    </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-lg text-gray-700 mb-4">For a comprehensive list of my publications, please visit my <a href="https://scholar.google.com/citations?user=EV1DgP0AAAAJ&hl=en" target="_blank" class="text-blue-600 hover:underline font-medium">Google Scholar page</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <h2 class="text-4xl font-bold text-center mb-12 section-title">CV</h2>
+                <p class="text-lg text-gray-700 mb-8">Here's a downloadable version of my CV:</p>
+                <a href="https://github.com/sunipa/sunipa.github.io/blob/master/Resume_SunipaDev_Academic (1).pdf" class="inline-block border border-blue-600 text-blue-600 px-6 py-2 rounded-full text-base font-semibold hover:bg-blue-50 hover:text-blue-700 transition-all duration-300" target="_blank">
+                    Download CV <i class="fas fa-file-pdf ml-2"></i>
+                </a>
+                
+                <div class="mt-12 w-full h-[600px] md:h-[800px] border border-gray-300 rounded-lg overflow-hidden">
+                    <iframe src="https://github.com/sunipa/sunipa.github.io/raw/master/Resume_SunipaDev_Academic%20(1).pdf" class="w-full h-full" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+            <p>© <span id="current-year"></span> Sunipa Dev. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="https://github.com/sunipa" target="_blank" aria-label="GitHub Profile" class="text-gray-400 hover:text-white transition-colors duration-300 text-xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sunipa-dev-a12906126/" target="_blank" aria-label="LinkedIn Profile" class="text-gray-400 hover:text-white transition-colors duration-300 text-xl">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=EV1DgP0AAAAJ&hl=en" target="_blank" aria-label="Google Scholar Profile" class="text-gray-400 hover:text-white transition-colors duration-300 text-xl">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="mailto:sunipadev@google.com" aria-label="Email" class="text-gray-400 hover:text-white transition-colors duration-300 text-xl">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data for publications (replace with a dynamic fetch from your own JSON API or manual updates)
+        const publicationsData = [
+            
+            {
+                title: "Towards Geo-Culturally Grounded LLM Generations",
+                authors: "Piyawat Lertvittayakumjorn, David Kinney, Vinodkumar Prabhakaran, Donald Martin Jr., Sunipa Dev",
+                venue: "ACL",
+                year: 2025,
+                link: "https://arxiv.org/abs/2502.13497",
+                type: "Conference"
+            },
+            {
+                title: "ViSAGe: A global-scale analysis of visual stereotypes in text-to-image generation",
+                authors: "A Jha, V Prabhakaran, R Denton, S Laszlo, S Dave, R Qadri, CK Reddy, S Dev",
+                venue: "ACL",
+                year: 2024,
+                link: "https://arxiv.org/abs/2401.06310",
+                type: "Conference"
+            },
+            {
+                title: "VERB: Visualizing and interpreting bias mitigation techniques geometrically for word representations",
+                authors: "A Rathore, S Dev, JM Phillips, V Srikumar, Y Zheng, CCM Yeh, J Wang, ...",
+                venue: "ACM Transactions on Interactive Intelligent Systems",
+                year: 2024,
+                link: "https://dl.acm.org/doi/abs/10.1145/3631627",
+                type: "Journal"
+            },
+
+
+            {
+                title: "Building socio-culturally inclusive stereotype resources with community engagement",
+                authors: "S Dev, J Goyal, D Tewari, S Dave, V Prabhakaran",
+                venue: "Advances in Neural Information Processing Systems",
+                year: 2023,
+                link: "https://proceedings.neurips.cc/paper_files/paper/2023/hash/52e50529d479154a8361665a3637651a-Abstract-Datasets_and_Benchmarks.html",
+                type: "Conference"
+            },
+            {
+                title: "SeeGULL: A stereotype benchmark with broad geo-cultural coverage leveraging generative models",
+                authors: "A Jha, A Davani, CK Reddy, S Dave, V Prabhakaran, S Dev",
+                venue: "ACL",
+                year: 2023,
+                link: "https://arxiv.org/abs/2305.11840",
+                type: "Conference"
+            },
+            {
+                title: "MISGENDERED: Limits of large language models in understanding pronouns",
+                authors: "T Hossain, S Dev*, S Singh*",
+                venue: "ACL",
+                year: 2023,
+                link: "https://arxiv.org/abs/2306.03950",
+                type: "Conference"
+            },
+                      {
+                title: "PaLM: Scaling Language Modeling with Pathways",
+                authors: "Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, ...",
+                venue: "JMLR",
+                year: 2023,
+                link: "https://arxiv.org/abs/2305.10403",
+                type: "Journal"
+            },
+
+            {
+                title: "Palm 2 technical report",
+                authors: "R Anil, AM Dai, O Firat, M Johnson, D Lepikhin, A Passos, S Shakeri, ...",
+                venue: "arXiv preprint arXiv:2305.10403",
+                year: 2023,
+                link: "https://arxiv.org/abs/2305.10403",
+                type: "Preprint"
+            },
+            {
+                title: "The tail wagging the dog: Dataset construction biases of social bias benchmarks",
+                authors: "NR Selvam, S Dev, D Khashabi, T Khot, KW Chang",
+                venue: "arXiv preprint arXiv:2210.10040",
+                year: 2022,
+                link: "https://arxiv.org/abs/2210.10040",
+                type: "Preprint"
+            },
+            {
+                title: "Re-contextualizing fairness in NLP: The case of India",
+                authors: "S Bhatt, S Dev, P Talukdar, S Dave, V Prabhakaran",
+                venue: "AACL",
+                year: 2022,
+                link: "https://arxiv.org/abs/2209.12226",
+                type: "Preprint"
+            },
+            {
+                title: "On Measures of Biases and Harms in NLP",
+                authors: "S Dev, E Sheng, J Zhao, J Sun, Y Hou, M Sanseverino, J Kim, N Peng, KW Chang",
+                venue: "AACL",
+                year: 2021,
+                link: "https://arxiv.org/abs/2108.03362",
+                type: "Preprint"
+            },
+            {
+                title: "Socially aware bias measurements for Hindi language representations",
+                authors: "V Malik, S Dev, A Nishi, N Peng, KW Chang",
+                year: 2021,
+                link: "https://arxiv.org/abs/2110.07871",
+                type: "Preprint"
+            },
+
+            {
+                title: "Harms of gender exclusivity and challenges in non-binary representation in language technologies",
+                authors: "S Dev, M Monajatipoor, A Ovalle, A Subramonian, JM Phillips, KW Chang",
+                venue: "EMNLP",
+                year: 2021,
+                link: "https://aclanthology.org/2021.emnlp-main.488/",
+                type: "Conference"
+            },
+            {
+                title: "On Measuring and Mitigating Biased Inferences of Word Embeddings",
+                authors: "S Dev, T Li, J Phillips, V Srikumar",
+                venue: "AAAI",
+                year: 2020,
+                link: "https://arxiv.org/abs/1901.07656",
+                type: "Conference"
+            },
+            {
+                title: "Closed Form Word Embedding Alignment",
+                authors: "S Dev, S Hassan, JM Phillips",
+                venue: "IEEE ICDM",
+                year: 2019,
+                link: "https://ieeexplore.ieee.org/document/9087532",
+                type: "Conference"
+            },
+            {
+                title: "Attenuating Bias in Word Vectors",
+                authors: "S Dev, J Phillips",
+                venue: "AISTATS",
+                year: 2019,
+                link: "http://proceedings.mlr.press/v89/dev19a.html",
+                type: "Conference"
+            },
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = document.querySelector('header').offsetHeight;
+                        const elementPosition = targetElement.offsetTop;
+                        const offsetPosition = elementPosition - headerOffset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Update current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Populate publications section
+            const publicationsList = document.getElementById('publications-list');
+            const yearNavigationLinks = document.getElementById('year-navigation-links');
+
+            if (publicationsList) {
+                // Sort publications by year in descending order
+                publicationsData.sort((a, b) => b.year - a.year);
+
+                let currentYear = null;
+                const years = [];
+
+                publicationsData.forEach(pub => {
+                    if (pub.year !== currentYear) {
+                        currentYear = pub.year;
+                        years.push(currentYear);
+                        const yearHeading = document.createElement('h3');
+                        yearHeading.id = `year-${currentYear}`; // Add ID for direct linking
+                        yearHeading.className = 'year-group-heading';
+                        yearHeading.textContent = currentYear;
+                        publicationsList.appendChild(yearHeading);
+                    }
+
+                    const pubItem = document.createElement('div');
+                    pubItem.className = 'mb-4 pb-4 border-b border-gray-200 last:mb-0 last:pb-0 last:border-b-0'; // Tailwind for spacing and separator
+
+                    // Bold "Sunipa Dev" in authors
+                    let authorsHtml = pub.authors.replace(/Sunipa Dev/g, '<span class="font-bold">Sunipa Dev</span>');
+
+                    pubItem.innerHTML = `
+                        <p class="publication-authors">${authorsHtml}</p>
+                        <p class="publication-title"><a href="${pub.link}" target="_blank" class="hover:underline">${pub.title}</a></p>
+                        <div class="publication-venue-year">
+                            <span class="publication-venue">${pub.venue}. ${pub.year}</span>
+                            ${pub.type ? `<span class="publication-tag">${pub.type}</span>` : ''}
+                            <a href="${pub.link}" target="_blank" class="publication-link">[BibTex]</a>
+                        </div>
+                    `;
+                    publicationsList.appendChild(pubItem);
+                });
+
+                // Populate year navigation links
+                if (yearNavigationLinks) {
+                    yearNavigationLinks.innerHTML = years.map(year => `<a href="#year-${year}" class="year-navigation-link">${year}</a>`).join(', ');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
